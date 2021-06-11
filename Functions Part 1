@@ -1,0 +1,58 @@
+How To Declare a Function
+__________________________________________________________
+            
+            Typically use verb to indicate action 
+            |
+function nameOfFunction(parameters) {
+       //body of tghe funvtion. This is a regular code block            
+       // everything we already covered works inside here.
+}  
+
+Example: 
+function multiply(x,y) {
+      return x*y;
+      }
+   DRY ( Don't repeat Yoiurself) : Reminder to keep code consice. 
+   
+   Declaring vs Calling a function
+   __________________________________________
+      "      a function means specifying the block of code to repeat
+      
+      Example: function double(x) {
+      VAR RESULT = X* 2 ;
+      return result;
+      }
+      
+      
+      
+      Calling or invoking a function means actually executing the code 
+     
+     Example:
+     
+     double(6) ;
+      12
+      
+      console.log(combineName("Jukari","Michael)) ;
+      
+      
+      Parameters/Arguments (Input) 
+     ___________________________________
+      Functions can but do not have to take input, called parameters
+     
+     Paraneters work like variables that can be used in the body of the function - however their valurs are typicvally only given when the function is called, not when it is defined
+     
+     When the value itself is passed to the function, its called  an argument 
+     
+     Body
+     _________________
+     
+     The body of the function is the code block that goes between the curly braces.
+     
+     function repeatMessage(message, times) {
+           for (var i=0; i < times; i ++) { 
+           console.log(message);____________________________LOOP FUNCTION
+           }
+           }
+     
+      
+     
