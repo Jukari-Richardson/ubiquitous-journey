@@ -55,4 +55,5 @@ function multiply(x,y) {
            }
      
       
-     
+     CONSOLE.LOG( ) WILL ONLY PRINT ONE MESASAGE
+     MUST USE RETURN VALUE IN ORDER FOR FUNCTION TO OPERATE THROUGHOUT THE CODE
