@@ -1,0 +1,73 @@
+Short Circuit 
+___________________
+
+Operators stop comparisons as soon as a value is determined — meaning it may end early if it already knows the result.
+
+var age = 21 
+var gender = 'female'; 
+
+age < 22 && gender === 'female' 		// Has to look at both sides of the
+									// logical && (and) operator
+
+age > 22 && gender === 'male'		//
+Will not even look at the 
+// second half, because the first 
+// half already caused the boolean 
+// expression to fail
+
+TRUTHY VS FALSY 
+______________________
+
+FALSY VALUES 
+_____
+Here are some values that evaluate to false:
+false
+0 (the number zero)
+"" (an empty string)
+null
+undefined
+
+TERNARY OPERATORS 
+______________________
+Syntax Description:
+condition ? value if true : value if false
+
+ Example:
+var age = 12;
+(age < 18) ? 'child': 'adult';
+  'child'
+
+
+SWITCH OPERATOR
+____________________
+ Switch statements compares expressions to a sewries of cases and executes block of code once match is found 
+ 
+switch (expression) {
+  case value1:
+    // Code block if expression matches value1
+    break;
+  case value2:
+    // Code block if expression matches value2
+    break;
+  ...
+  
+  switch (dayOfTheWeek) {
+  case 'Monday':
+    console.log('Have a great start to the week!');
+    break;
+  case 'Tuesday':
+    console.log('Have a good Tuesday :)');
+    break;
+  case 'Wednesday':
+    console.log('You are halfway there!');
+    break;
+  case 'Thursday':
+    console.log('One more day until the weekend.');
+    break;
+  case 'Friday':
+    console.log('Happy Friday, have a good weekend!');
+    break;
+  default:
+    console.log('Not a weekday!');
+}
+
