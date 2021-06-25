@@ -1,0 +1,24 @@
+LOOPS PART 1 
+______________
+We use loops when : 
+When a user is playing a game and has 3 lives 
+When someone enters their password incorrectly and needs to try again (but maybe only 5x before they’re locked out of their account!)
+While scrolling down your newsfeed, load more posts
+
+When else might we use a loop?
+While loop:
+while (condition is true) {
+	// block of code to be repeated
+}
+
+For Loop:
+for (a predefined number of times) {
+	// block of code to be repeated
+
+
+
+A while loop repeats a block of code while a condition is true
+When the condition is no longer met, we break out of the loop
+
+++ is equivalent to +1 in code block
++= is equivalent
