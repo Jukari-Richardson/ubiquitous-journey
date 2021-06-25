@@ -1,0 +1,152 @@
+Array is type of data structure
+Data structures are meant to optimize and speed up processes
+
+An array is a type of data structure that holds an ordered list of values
+
+Values can be of any type, and a single array can hold items with different types
+
+Arrays are iterable, meaning you can loop over each item in them
+
+                       0         1    2        3    4-------------[Array Index]---------|
+                                                                                        |
+var exampleArray = ["Code Ramp, 42, "banana", true, false] ;                            |
+                                                                                        |
+Arrays require square brackets and all components are seperated by comma.               |
+                                                                                        | 
+Each item in an array corresponds to an index (note: indexing always starts at 0!)------ 
+
+
+INDEXING
+------------
+To access an item, use an index inside square brackets.
+
+console.log(exampleArray[0])     //print: Code Ramp
+console.log(exampleArray[1])  // print:  42
+console.log(exampleArray[2], exampleArray[3])
+
+To change an item in the array, use the bracket notation to indicate the index of the item you want to update and then re-assign that index to a new value
+
+// BEFORE
+var dogs =  ["pomeranian","corgi", "shih tzu", "husky"];
+
+// Now let’s update
+dogs[2] = "dachshund";
+
+// AFTER
+console.log(dogs);
+["pomeranian", "corgi", "dachshund", "husky"];
+
+To add an item to the end of a list, use the .push() method, with the item you want to add inside the parentheses
+// Let’s add lab to our array of dog breeds
+dogs.push("lab");
+
+
+// AFTER
+["pomeranian", "corgi", "dachshund", "husky", "lab"];
+
+To remove and return an item from the end, use the .pop() method*
+dogs.pop(); 
+console.log(dogs);  // ["pomeranian", "corgi", "dachshund", "husky"];
+
+We focus on the methods that allow us to add/remove from an end of an array, and not from the beginning (like .shift() or .unshift() do) because that’s what arrays are best at when it comes to optimizing for speed!
+
+Fast code is one of the most important things that programmers consider when they make decisions about which data structure to use. Here is one example of a choice that does have a speed tradeoff. 
+When you add a new item to the end of an array, the item you’re adding gets an index, but how many other items in that list need to be reassigned a new index? 
+None! 
+But say you added an item to the beginning of an array, now that item you added gets an index of 0, but what needs to happen to all the other items? 
+Everything needs to get reassigned, and that takes time! 
+
+SPLITTING + JOINING ARRAYS
+---------------------------
+VAR DATE = 10/11/2017. split("/");
+date== ["10", "11", "2017"];
+
+var timestamp = "10/11/2017";
+var date = timestamp.split("/");
+console.log(date); 					//	["10", "11", "2017"]	
+
+
+
+
+var timestamp = ["10", "11", "2017"];
+var date = timestamp.join("-");
+console.log(date); 					//	"10-11-2017"
+
+Often times we’ll want to create arrays from a string, or perhaps transition an array back into a string 
+To do these actions, use the .split() and .join() methods
+
+
+var timestamp = "10/11/2017";
+var date = timestamp.split("/");
+console.log(date); 					//	["10", "11", "2017"]	
+	
+date[0] = "October";
+console.log(date);						// 	["October", "11", "2017"]
+
+var humanReadableDate = date.join(" ");
+console.log(humanReadableDate);			//  	"October 11 2017"
+
+SLICING AN ARRAY 
+------------------
+To grab a segment of your array you czn use the .slice method.
+This will not change the original array, but will just save a copy of the items in that segment. 
+Slice allows you to define what index to start at and where to end
+
+
+var dogs = ["pomeranian", "corgi", "shih tzu", "dachshund", "husky"];
+
+
+dogs.slice(3) 				// starts at index 3 to get 
+["dachshund", "husky"]
+
+
+dogs.slice(0, 2); 	 		// starts at index 0, goes up until (but not 
+["pomeranian", "corgi"] 	// including) index 2 
+
+SPLICING AN ARRAY
+------------------
+
+If you’d like to actually change the original array, use .splice()
+This method’s syntax looks like slice, as it always allows you to define a start index, but instead of an end you tell it how many items to grab
+
+
+var dogs = ["pomeranian", "corgi", "shih tzu", "dachshund", "husky"];
+
+
+var favBreeds = dogs.splice(1, 3); 	// We start at index 1 and grab
+								// exactly 3 items to save into a new
+								// variable
+
+
+console.log(dogs);  				// ["pomeranian", "husky"];
+console.log(favBreeds); 			// ["corgi", "shih tzu", "dachshund"];
+
+We can also use .splice to add items to an orginal array 
+
+var dogs = ["pomeranian", "corgi", "shih tzu", "dachshund", "husky"];
+
+LENGTH
+------------------
+
+A property that will tell you how many items are in an array
+Works just like length does for strings!
+console.log(dogs);	
+// ["pomeranian", "corgi", "shih tzu", "dachshund", "husky"];
+
+dogs.length;  		// 5
+
+
+
+
+
+
+dogs.splice(5, 0, “hotdog”, “poodle”); // We start at index 5
+							 	 // Delete 0 items
+								 // Add “hotdog” and “poodle” to dogs
+console.log(dogs);  
+// ["pomeranian", "corgi", "shih tzu", "dachshund", "husky", “hotdog”, “poodle”]
+
+
+
+
+
